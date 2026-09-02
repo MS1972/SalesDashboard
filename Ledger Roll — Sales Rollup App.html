@@ -479,6 +479,294 @@ function lookupLegacyTotal(map, clientName){
   return undefined;
 }
 
+const PRIOR_YEAR_DATA = {
+  "2024": {
+    "hasMargin": false,
+    "bySection": {
+      "solutions and staff augmentation (projects) - track 1 (secured)": {
+        "ais solutions": {
+          "revenue": 0
+        },
+        "aldevron": {
+          "revenue": 0
+        },
+        "automation anywhere": {
+          "revenue": 546884
+        },
+        "checkpoint": {
+          "revenue": 30190
+        },
+        "churchs-chicken": {
+          "revenue": 7500
+        },
+        "databricks": {
+          "revenue": 1099676
+        },
+        "egia": {
+          "revenue": 604000
+        },
+        "hal": {
+          "revenue": 424016
+        },
+        "hitachi asia": {
+          "revenue": 543456
+        },
+        "hitachi stem": {
+          "revenue": 0
+        },
+        "hpe": {
+          "revenue": 829892
+        },
+        "icertis": {
+          "revenue": 86428
+        },
+        "idbs": {
+          "revenue": 18000
+        },
+        "liveramp": {
+          "revenue": 192000
+        },
+        "molecular devices": {
+          "revenue": 188454
+        },
+        "ringcentral": {
+          "revenue": 551110
+        },
+        "semi": {
+          "revenue": 200992
+        },
+        "uipath": {
+          "revenue": 486086
+        },
+        "yetimyfriend": {
+          "revenue": 29847
+        }
+      },
+      "solutions and staff augmentation (projects) - track 2": {},
+      "staffing (secured)": {
+        "hpe": {
+          "revenue": 1708784
+        },
+        "marvell india": {
+          "revenue": 191096
+        },
+        "azu solutions": {
+          "revenue": 0
+        },
+        "databricks": {
+          "revenue": 0
+        },
+        "jsg": {
+          "revenue": 103121
+        },
+        "mastek": {
+          "revenue": 598888
+        },
+        "matchpoint solutions": {
+          "revenue": 39695
+        },
+        "maxonic": {
+          "revenue": 728144
+        },
+        "technology partners": {
+          "revenue": 0
+        },
+        "vdart": {
+          "revenue": 114240
+        }
+      },
+      "investments": {
+        "ai forward": {
+          "revenue": 0
+        },
+        "ovis billable websites": {
+          "revenue": 0
+        },
+        "internal projects": {
+          "revenue": 0
+        },
+        "bench": {
+          "revenue": 0
+        },
+        "bench (hitachi asia)": {
+          "revenue": 0
+        },
+        "sales & marketing (nvish & metasys)": {
+          "revenue": 0
+        }
+      }
+    }
+  },
+  "2025": {
+    "hasMargin": true,
+    "bySection": {
+      "solutions and staff augmentation (projects) - track 1 (secured)": {
+        "ais solutions": {
+          "revenue": 0,
+          "margin": 0
+        },
+        "aldevron": {
+          "revenue": 0,
+          "margin": 0
+        },
+        "automation anywhere": {
+          "revenue": 411812,
+          "margin": 53239
+        },
+        "checkpoint": {
+          "revenue": 24990,
+          "margin": 16347
+        },
+        "churchs-chicken": {
+          "revenue": 7500,
+          "margin": 5826
+        },
+        "databricks": {
+          "revenue": 1817631,
+          "margin": 732194.62
+        },
+        "egia": {
+          "revenue": 468000,
+          "margin": 267468
+        },
+        "hal": {
+          "revenue": 413786,
+          "margin": 211248
+        },
+        "hitachi asia": {
+          "revenue": 546277,
+          "margin": 197758
+        },
+        "hitachi stem": {
+          "revenue": 49250,
+          "margin": 12597
+        },
+        "hpe": {
+          "revenue": 911397,
+          "margin": 419200.33
+        },
+        "icertis": {
+          "revenue": 84100,
+          "margin": 26925
+        },
+        "idbs": {
+          "revenue": 35000,
+          "margin": 10000
+        },
+        "liveramp": {
+          "revenue": 192000,
+          "margin": 85101
+        },
+        "molecular devices": {
+          "revenue": 193200,
+          "margin": 64901
+        },
+        "ringcentral": {
+          "revenue": 503752,
+          "margin": 262689
+        },
+        "semi": {
+          "revenue": 199992,
+          "margin": 16452
+        },
+        "uipath": {
+          "revenue": 533400,
+          "margin": 201192
+        },
+        "yetimyfriend": {
+          "revenue": 58661,
+          "margin": 14188
+        }
+      },
+      "solutions and staff augmentation (projects) - track 2": {},
+      "staffing (secured)": {
+        "hpe": {
+          "revenue": 1544346,
+          "margin": 125311.34
+        },
+        "marvell india": {
+          "revenue": 214212,
+          "margin": 81269.04
+        },
+        "azu solutions": {
+          "revenue": 81472,
+          "margin": 11144
+        },
+        "databricks": {
+          "revenue": 59904,
+          "margin": 19344
+        },
+        "jsg": {
+          "revenue": 72032,
+          "margin": 0
+        },
+        "mastek": {
+          "revenue": 363736,
+          "margin": 0
+        },
+        "matchpoint solutions": {
+          "revenue": 119637,
+          "margin": 0
+        },
+        "maxonic": {
+          "revenue": 819543,
+          "margin": 0
+        },
+        "technology partners": {
+          "revenue": 6000,
+          "margin": 0
+        },
+        "vdart": {
+          "revenue": 120960,
+          "margin": 0
+        }
+      },
+      "investments": {
+        "ai forward": {
+          "revenue": 0,
+          "margin": 0
+        },
+        "ovis billable websites": {
+          "revenue": 0,
+          "margin": 0
+        },
+        "internal projects": {
+          "revenue": 0,
+          "margin": 0
+        },
+        "bench": {
+          "revenue": 0,
+          "margin": 0
+        },
+        "bench (hitachi asia)": {
+          "revenue": 0,
+          "margin": 0
+        },
+        "sales & marketing (nvish & metasys)": {
+          "revenue": 0,
+          "margin": 0
+        }
+      }
+    }
+  }
+};
+
+// PRIOR_YEAR_DATA above is the finance team's official 2024 & 2025 revenue/margin
+// rollup (source: Sales_and_Forecast_Summary_2026_20260902_0716_UTC.xlsx, "Multi-Year
+// Revenue & Margin" sheet, captured 2026-09-02). These two years are baked into the
+// tool and are NOT re-derived from the uploaded workbook — only the current year
+// (e.g. 2026) is still parsed dynamically from whatever file is uploaded each run.
+// Keyed by lowercased section title -> lowercased client name, matching how the
+// current year's own sections/clients are keyed, so lookups stay subgroup-accurate
+// (e.g. "HPE" appears in two different sections with two different figures).
+function lookupPriorYearData(yearLabel, sectionTitle, clientName){
+  const yd = PRIOR_YEAR_DATA[yearLabel];
+  if(!yd) return undefined;
+  const sec = yd.bySection[lc(sectionTitle)];
+  if(!sec) return undefined;
+  return sec[lc(clientName)];
+}
+
 function round2(n){ return Math.round(n+Number.EPSILON); } // whole-dollar rounding
 
 function buildMonthlyPerformance(parsed, commentsMap, yearLabel){
@@ -598,7 +886,7 @@ function buildMultiYear(parsed, priorYears, commentsMap, currentYearLabel){
       const agg=sec.clients.get(clientName);
       const row=[clientName];
       priorYears.forEach((py,pi)=>{
-        const hit=py.lookup(agg, clientName);
+        const hit=py.lookup(agg, clientName, sec.title);
         if(hit){
           row.push(round2(hit.revenue));
           if(py.hasMargin) row.push(hit.margin!==undefined?round2(hit.margin):null);
@@ -808,7 +1096,6 @@ processBtn.addEventListener('click', async ()=>{
 
     const name2026=findSheetName(workbook, ['sales','customer',currentYear]);
     const nameComments = findSheetName(workbook, ['clientcomment']) || findSheetName(workbook, [currentYear,'client']) || findSheetName(workbook, ['client','comment']);
-    const priorYearNames = availableYears.slice(1); // e.g. ['2025','2024']
 
     await logLine(`> "${name2026}" — parsing sections & client rollup...`);
     const m2026=sheetMatrix(workbook, name2026);
@@ -827,29 +1114,20 @@ processBtn.addEventListener('click', async ()=>{
       await logLine('> no ClientComments-style sheet found — Comments will be left blank', 'warn');
     }
 
+    // 2024 and 2025 figures are hardcoded (baked into PRIOR_YEAR_DATA from the
+    // finance team's official rollup) rather than re-parsed from the uploaded
+    // workbook — only the current year (name2026 above) is read dynamically
+    // each run. See PRIOR_YEAR_DATA / lookupPriorYearData near the top of this file.
     const priorYears=[];
-    for(const y of priorYearNames){
-      const sn=findSheetName(workbook, ['sales','customer',y]);
-      if(!sn) continue;
-      const mat=sheetMatrix(workbook, sn);
-      // Try the standard Group/Sub-Group layout first; fall back to a legacy
-      // "Name + Total" layout (no Group column) if that fails.
-      try{
-        const agg=aggregateBySubgroupClient(mat);
-        await logLine(`> "${sn}" — aggregated by Sub-Group + Client (${agg.size} combinations)`, 'ok');
-        priorYears.push({
-          label:y, hasMargin:true, warnIfMissing:(y===priorYearNames[0]),
-          lookup:(agg2, clientName)=>lookupBySubgroups(agg, agg2.subgroups, clientName),
-        });
-      }catch(e){
-        const legacy=parseLegacyTotalsSheet(mat);
-        await logLine(`> "${sn}" — different layout, matched ${legacy.size} client names (best-effort, revenue only)`, 'warn');
-        priorYears.push({
-          label:y, hasMargin:false, warnIfMissing:false,
-          lookup:(agg2, clientName)=>{ const hit=lookupLegacyTotal(legacy, clientName); return hit?{revenue:hit.value}:undefined; },
-        });
-      }
+    for(const y of ['2025','2024']){
+      const yd = PRIOR_YEAR_DATA[y];
+      if(!yd) continue;
+      priorYears.push({
+        label:y, hasMargin:yd.hasMargin, warnIfMissing:(y==='2025'),
+        lookup:(agg2, clientName, sectionTitle)=>lookupPriorYearData(y, sectionTitle, clientName),
+      });
     }
+    await logLine(`> using hardcoded ${priorYears.map(p=>p.label).join(' & ')} figures (not read from the uploaded workbook)`, 'ok');
 
     await logLine('> building "'+currentYear+' Monthly Performance"...');
     const tab1=buildMonthlyPerformance(parsed2026, commentsMap, currentYear);
